@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			  xmlns:myapp="http://schemas.android.com/apk/res/com.swatiee"
+			  android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView 
+		android:id="@+id/tasks_title"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="@string/add_task"
+		android:textSize="20sp"
+		android:background="@color/title_background"
+		android:textColor="@color/white"
+		android:editable="true"
+		android:gravity="center_horizontal"
+	 />
+	    
+
+		<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="Task Name"
+			android:id="@+id/task_name"/>
+		<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:inputType="textPostalAddress"
+			android:hint="Street address or Landmark name"
+			android:id="@+id/task_address"/>
+		<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:inputType="textEmailAddress"
+			android:hint="Notify to this email address. "
+			android:id="@+id/task_email"/>
+		<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:inputType="number"
+			android:numeric="integer"
+			android:hint="Send SMS to this phone."
+			android:id="@+id/task_phone"/>
+			
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_horizontal">
+		<Button
+			android:id="@+id/add_button"
+	 		android:layout_width="wrap_content"
+	 		android:layout_height="wrap_content"
+	 		android:text="@string/add_task"/>
+		<Button
+			android:id="@+id/remove_button"
+	 		android:layout_width="wrap_content"
+	 		android:layout_height="wrap_content"
+	 		android:text="@string/remove_task"/>
+		<Button
+			android:id="@+id/view_map_button"
+	 		android:layout_width="wrap_content"
+	 		android:layout_height="wrap_content"
+	 		android:text="@string/view_map"/>
+	</LinearLayout>
+	
+	<com.google.android.maps.MapView
+		android:id="@+id/map"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:clickable="true"
+ 		android:apiKey="0yzltOuFu4h_oEIp2Rd31DAgDGx1hZWPUdpeXbw" />
+ 		<!-- release key 0yzltOuFu4h_oEIp2Rd31DAgDGx1hZWPUdpeXbw
+ 		debug key 0yzltOuFu4h9ASiquX7MmMOH9jjCpOgb9qHCfIg-->
+			
+	<com.admob.android.ads.AdView
+		android:id="@+id/ad"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		myapp:backgroundColor="#000000"
+		myapp:primaryTextColor="#FFFFFF"
+		myapp:secondaryTextColor="#CCCCCC"
+		android:layout_alignParentBottom="true"
+	/>			
+ 		
+
+</LinearLayout>

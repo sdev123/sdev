@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:myapp="http://schemas.android.com/apk/res/com.swatiee"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center">
+
+
+
+	<LinearLayout android:baselineAligned="true" android:orientation="horizontal"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:gravity="center">
+		<ImageView android:src="@drawable/list2small"
+			android:onClick="onViewTasksBtnClick" android:padding="20dp"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"></ImageView>
+		<ImageView android:src="@drawable/add2small"
+			android:onClick="onAddTaskBtnClick" android:padding="20dp"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"></ImageView>
+	</LinearLayout>
+	<LinearLayout android:baselineAligned="true" android:gravity="center"
+		android:orientation="horizontal" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<ImageView android:src="@drawable/settings2small"
+			android:onClick="onSettingBtnClick" android:padding="20dp"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"></ImageView>
+		<ImageView android:src="@drawable/notehistory2small"
+			android:onClick="onNoteHistoryBtnClick" android:padding="20dp"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"></ImageView>
+	</LinearLayout>
+
+
+</LinearLayout>

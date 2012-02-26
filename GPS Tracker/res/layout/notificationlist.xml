@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+			  xmlns:myapp="http://schemas.android.com/apk/res/com.swatiee"
+
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<TextView 
+		android:id="@+id/tasks_title"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/notification_history"
+		android:textSize="20sp"
+		android:background="@color/title_background"
+		android:textColor="@color/white"
+		android:gravity="center_horizontal"
+	    />
+
+	<Button
+		android:id="@+id/delete_button"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:layout_alignParentBottom="true"
+ 		android:text="@string/delete_notifications"
+ 		android:onClick="onDeleteClicked"/>	    
+	    
+	<ListView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@id/android:list"
+		android:layout_below="@id/tasks_title"
+		android:layout_above="@id/delete_button"/>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@id/android:empty"
+		android:text="@string/no_notifications"
+		 android:gravity="center_vertical|center_horizontal"
+		android:layout_below="@id/tasks_title"
+		android:layout_above="@id/delete_button" />
+
+	<com.admob.android.ads.AdView
+		android:id="@+id/ad"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		myapp:backgroundColor="#000000"
+		myapp:primaryTextColor="#FFFFFF"
+		myapp:secondaryTextColor="#CCCCCC"
+		android:layout_alignParentBottom="true"/>
+		
+	/>		
+</RelativeLayout>

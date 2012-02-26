@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+<LinearLayout 
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center_vertical">
+
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:padding="3dp"
+			android:text="Nick Name" />
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:padding="3dp"
+			android:textSize="12dp" android:text=" (Used in notification email/sms)" />
+
+	</LinearLayout>
+	<EditText android:id="@+id/nickname" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:hint="Sender's Name or Nick Name" />
+
+	<Button android:id="@+id/save_nickname" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="Save Nick Name"
+		android:onClick="onSaveNickName" />
+
+	<TextView android:id="@+id/text_email_address"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:gravity="center_horizontal" android:text="___________________________________"
+		android:padding="10dp" />
+
+
+
+	<TextView android:id="@+id/text_email_address"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textSize="12dp" android:padding="10dp" android:text="@string/gmail_username_info" />
+
+
+	<EditText android:id="@+id/edit_email_address"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:hint="Gmail User Name" android:inputType="textEmailAddress" />
+
+	<EditText android:id="@+id/edit_password"
+		android:layout_width="fill_parent" android:hint="Password"
+		android:layout_height="wrap_content" android:password="true" />
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<Button android:id="@+id/save_button" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="@string/save"
+			android:onClick="saveSettings" />
+		<Button android:id="@+id/cancel_button" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="@string/cancel" />
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

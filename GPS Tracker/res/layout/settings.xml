@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical">
+    
+
+<CheckedTextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/disable_notifications"
+    android:checked="false"
+    android:clickable="true"
+    android:focusable="true"
+	android:text="@string/disable_notifications"
+	android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+	android:onClick="onCheckmarkToggle"/>
+	    
+	    
+	        
+   
+<TextView 
+	android:id="@+id/text_email_address"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:text="@string/gmail_username"/>
+
+
+<LinearLayout android:baselineAligned="true" android:orientation="horizontal" 
+	android:layout_width="fill_parent" android:layout_height="wrap_content">
+<EditText
+	android:id="@+id/edit_email_address"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:hint="from email address"
+	android:inputType="textEmailAddress"/>
+
+<TextView 
+	android:id="@+id/text_at_gmail_com"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:text=" @gmail.com"/>
+			
+</LinearLayout>				
+<TextView 
+	android:id="@+id/text_password"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:text="@string/password"/>
+				
+<EditText
+	android:id="@+id/edit_password"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:password="true"/>
+	
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    	
+		<Button
+			android:id="@+id/save_button"
+	 		android:layout_width="fill_parent"
+	 		android:layout_height="wrap_content"
+	 		android:text="@string/save"
+	 		android:onClick="saveSettings"/>
+		<Button
+			android:id="@+id/cancel_button"
+	 		android:layout_width="fill_parent"
+	 		android:layout_height="wrap_content"
+	 		android:text="@string/cancel"/>	
+			
+	</LinearLayout>				
+</LinearLayout>
